@@ -1,8 +1,26 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     --bg: rgb(19, 19, 19);
     --color: rgb(243, 243, 243);
+    --bgNavItemHover: rgba(255, 254, 254, 0.218);
+    --bgComponents: rgba(255, 255, 255, 0.091);
     background-color: var(--bg);
     color: var(--color);
+    overflow: hidden;
+    font-size: 10px;
+}
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color);
+}
+h1, h2, h3, h4, h5, h6, p, a, button, span, input, textarea {
+    font-size: 1.4em;
+    font-weight: normal;
+    margin: 0;
 }
 

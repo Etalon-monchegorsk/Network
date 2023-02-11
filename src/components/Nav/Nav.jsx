@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
-
+import NavModuleStyle from './Nav.module.css';
 
 
 function Nav() {
   return (
-    <div className='Nav'>
-        <Link to='/profile'>Profile</Link>
-        <Link to='/messages'><FontAwesomeIcon icon={solid('user-secret')} />Message</Link>
+    <div className={NavModuleStyle.container}>
+        <Link className={NavModuleStyle.item} to='/profile'>Profile</Link>
+        <Link className={NavModuleStyle.item} to='/messages'>Message</Link>
 
     </div>
   )  
