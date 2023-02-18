@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileModuleStyle from '../Profile.module.css';
-import avatar from '../../../img/multiCat.png';
+import Post from "./Post/Post";
+import Store from "../../../State/State";
 
 function Posts() {
     return ( 
@@ -11,18 +12,7 @@ function Posts() {
           <button>Add post</button>
         </div>
         <div className={ProfileModuleStyle.posts__list}>
-          <div className={ProfileModuleStyle.posts__item}>
-            <div>
-              <img src={avatar} alt="" />
-              <h3>Multi Cat</h3>
-            </div>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            </p>
-            <span>
-              ✖
-            </span>
-          </div>
+          {Store.posts.map(post=> <Post k={post.id} id={post.id} text={post.text}/> )}
         </div>
       </div>
      );
