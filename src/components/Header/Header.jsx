@@ -8,7 +8,6 @@ function Header() {
       <div className={HeaderModuleStyle.container}>
         <img src={NetworkLogo} alt="#" />
       </div>
-        
     </div>
   )
 }

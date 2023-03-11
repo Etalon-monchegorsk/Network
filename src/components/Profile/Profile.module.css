@@ -90,19 +90,24 @@
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     font-size: 1.4em;
+    
 }
   
 .posts__management button:hover {
     background-color: var(--color);
     color: var(--bg);
+    animation: buttonAnimation 1s infinite alternate;
+    cursor: pointer;
+}
+@keyframes buttonAnimation {
+    0% {
+        padding: 12.5px 30px;
+    }
+    100% {
+        padding: 12.5px 50px;
+    }
 }
   
-.posts__management button:active {
-    background-color: #3d94cf;
-    transition: all 0.25s;
-    -webkit-transition: all 0.25s;
-    box-shadow: none;
-}
 .posts__management textarea {
     height: 100px;
     min-height: 100px;
